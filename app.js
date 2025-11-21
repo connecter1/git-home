@@ -3,8 +3,7 @@ import express from 'express';
 import path from 'path';
 import logger from 'morgan';
 
-import indexRouter from './routes/index.js';
-import usersRouter from './routes/users.js';
+import router from './routes/index.js';
 
 const app = express();
 
@@ -17,8 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.resolve('public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(router);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
