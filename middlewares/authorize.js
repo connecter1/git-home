@@ -40,7 +40,7 @@ export default async function (req, res, next) {
     }
   }
 
-  req.userId = user.id;
+  req.user = { id: user.id, username: user.username };
 
   next();
 }
