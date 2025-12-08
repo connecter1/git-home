@@ -22,7 +22,7 @@ export async function initializeDataFile() {
   {
     "id": "019afcf2-6eb4-736f-b891-b97e2eda1f7f",
     "title": "Title 2",
-    "content": "Body post script",
+    "content": "Body post script Auto Created",
     "userId": "019afcb4-4f5b-74eb-b596-0491e4449ca3",
     "createdAt": "2025-12-08T07:52:17.844Z",
     "updatedAt": "2025-12-08T07:52:17.844Z"
