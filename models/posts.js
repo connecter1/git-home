@@ -10,7 +10,24 @@ export async function initializeDataFile() {
     await mkdir(dataDir, { recursive: true });
     await access(dataFile);
   } catch {
-    await writeFile(dataFile, '[]');
+    await writeFile(dataFile, `[
+  {
+    "id": "019afcea-c9c7-71f9-912f-b792e3124cad",
+    "title": "Title",
+    "content": "Body post",
+    "userId": "019afcb4-4f5b-74eb-b596-0491e4449ca3",
+    "createdAt": "2025-12-08T07:43:56.871Z",
+    "updatedAt": "2025-12-08T07:43:56.871Z"
+  },
+  {
+    "id": "019afcf2-6eb4-736f-b891-b97e2eda1f7f",
+    "title": "Title 2",
+    "content": "Body post script",
+    "userId": "019afcb4-4f5b-74eb-b596-0491e4449ca3",
+    "createdAt": "2025-12-08T07:52:17.844Z",
+    "updatedAt": "2025-12-08T07:52:17.844Z"
+  }
+]`);
   }
 }
 

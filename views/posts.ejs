@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Posts</title>
+  <link rel='stylesheet' href='/stylesheets/posts.css' />
+</head>
+<body>
+  <h1>All posts</h1>
+  <div class="posts">
+    <% if (posts && posts.length > 0) { %>
+      <% posts.forEach(post => { %>
+        <div class="post">
+          <h2><%= post.title %></h2>
+          <div class="meta">
+            USER ID: <%= post.userId %><br>
+            Created At: <%= new Date(post.createdAt).toLocaleString() %>
+          </div>
+          <div class="content"><%= post.content %></div>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <div class="no-posts">No posts</div>
+    <% } %>
+  </div>
+</body>
+</html>
